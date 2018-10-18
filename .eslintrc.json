@@ -8,6 +8,14 @@
 		"eslint:recommended",
 		"plugin:react/recommended"
 	],
+	"overrides": [
+    {
+      "files": ["*test.js"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -28,7 +36,7 @@
 			"unix"
 		],
 		"lines-between-class-members": [
-			2,
+			1,
 			"always"
 		],
 		"no-magic-numbers": 1,
