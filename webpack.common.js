@@ -1,5 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -74,5 +76,10 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
       filename: devMode ? '[name].css' : '[name].[hash].css'
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      'global-styles': path.resolve(__dirname, 'src/styles/styles.scss')
+    }
+  },
 };

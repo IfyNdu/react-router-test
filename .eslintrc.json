@@ -9,13 +9,16 @@
 		"plugin:react/recommended"
 	],
 	"overrides": [
-    {
-      "files": ["*test.js"],
-      "rules": {
-        "no-undef": "off"
-      }
-    }
-  ],
+		{
+			"files": [
+				"*test.js"
+			],
+			"rules": {
+				"no-undef": "off"
+			}
+		}
+	],
+	"parser": "babel-eslint",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -26,6 +29,12 @@
 	"plugins": [
 		"react"
 	],
+	"settings": {
+		"react": {
+			"pragma": "React",
+      "version": "^16.6.3"
+		}
+	},
 	"rules": {
 		"indent": [
 			2,
