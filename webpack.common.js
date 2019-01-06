@@ -7,6 +7,10 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 
+  entry: [
+    '@babel/polyfill',
+    './src/index.js'
+  ],
   module: {
     rules: [
       {
@@ -33,6 +37,20 @@ module.exports = {
         use: [
           {
             loader: 'html-loader'
+          }
+        ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: false
+            }
           }
         ]
       },
