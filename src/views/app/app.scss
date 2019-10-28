@@ -2,7 +2,19 @@
 
 
 .root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
 
   font-size: 5rem;
-  text-shadow: 2px 2px 4px coral;
+}
+
+
+.header {
+  height: 60px;
+
+  text-align: center;
 }
